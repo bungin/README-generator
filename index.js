@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import generateMarkdown from './utils/generateMarkdown.js'
+import fs from "fs";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -15,28 +16,30 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'ToC',
-        message: 'Input Table of Contents',
+        name: 'install',
+        message: 'Install instructions:',
     },
     {
         type: 'input',
-        name: 'installation',
-        message: '',
+        name: 'usage',
+        message: 'Intended usage:',
     },
     {
         type: 'input',
-        name: '',
-        message: '',
+        name: 'contribute',
+        message: 'Contribution instructions:',
     },
     {
         type: 'input',
-        name: '',
-        message: '',
+        name: 'test',
+        message: 'Testing instructions',
     },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) { 
+    fs.writeFile(fileName, generateMarkdown(data), (err) => console.log(err))
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -45,3 +48,5 @@ function init() {
 
 // Function call to initialize app
 init();
+
+
