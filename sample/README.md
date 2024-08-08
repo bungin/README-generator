@@ -2,7 +2,7 @@
 # README Generator
 
 ## Description
-A script to generate a README
+Generates a README based on template and user input.
 
 ## Table of Contents
 
@@ -12,13 +12,11 @@ A script to generate a README
 - [License](#license)
 
 ## Installation
-npm i inquirer
+Inquirer required: npm i inquirer
 ## Usage
-Generate README.md with user input and a template.
+To create a new README.md
 ## Credits
 NimMac/bungin
-
-
 ## License
 This project is licensed under the MIT license.
 
@@ -26,7 +24,8 @@ This project is licensed under the MIT license.
 ## Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Features
-JS, node.js.  NPM PKG(s): inquirer.
+JS, node.js 
+npm pkg(s): inquirer, fs
 ## How to Contribute
 n/a
 ## Tests

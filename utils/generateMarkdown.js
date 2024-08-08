@@ -25,7 +25,7 @@ function renderLicenseLink(license) {
     case 'GPL 3.0':
         return '(https://www.gnu.org/licenses/gpl-3.0)';
     case 'none':
-        return '';
+        return 'No License';
     default:
         return '';
 }

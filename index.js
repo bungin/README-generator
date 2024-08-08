@@ -44,19 +44,20 @@ const questions = [
     {
         type: 'input',
         name: 'features',
-        message: 'Features:'
+        message: 'Features:',
     },
     {
         type: 'list',
         name: 'license',
         message: 'License:',
-        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'none']
-    }
+        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'none'],
+    },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
-    fs.writeFile(fileName, generateMarkdown(data), (err) => console.log(err))
+    
+    fs.writeFile(fileName, generateMarkdown(data), (err) => err ? console.log(err) : console.log("Success"));
 }
 
 // TODO: Create a function to initialize app
@@ -64,7 +65,7 @@ function init() {
     inquirer.prompt(questions)
         .then((answers) => {
             writeToFile('README.md', answers);
-            console.log('Success')
+            // console.log('Success')
         })
         .catch ((err) => {
             console.log(err);
